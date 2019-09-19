@@ -16,6 +16,6 @@ public static void getTotal(double totalGross, double totalNet, int ticket){
 switch statement:
 
 
-``case 8: getTotal(totalGross, totalNet, ticket); break;
+    case 8: getTotal(totalGross, totalNet, ticket); break;
 
 

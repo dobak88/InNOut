@@ -19,3 +19,5 @@ switch statement:
     case 8: getTotal(totalGross, totalNet, ticket); break;
 
 
+^^^^^^^DONE^^^^^^^^
+

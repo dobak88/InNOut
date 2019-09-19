@@ -46,15 +46,9 @@ Scanner in = new Scanner(System.in);
                case 5: subTotal += getSub(milkshake, in); break;
                case 6: subTotal += getSub(soda, in); break;
                case 7: getOrder(subTotal, ticket, in); ticket++; totalNet += subTotal; subTotal = 0; break;
-               case 8:  break;
+               case 8: getTotal(totalGross, totalNet, ticket); break;
           }//switch
      }//while loop
-
-     totalGross = totalNet * TAX_RATE;
-
-     System.out.printf("\n\n\nTotal Revenue including tax: \t$%,.2f", totalGross);
-     System.out.printf("\nTotal Revenue without tax: \t$%,.2f", totalNet);
-     System.out.println("\nTotal number of orders: \t" + (ticket - 1));
      in.close();
 }//method
 
@@ -71,11 +65,19 @@ public static double getSub(double menuChoice, Scanner in){
 public static void getOrder(double cost, int ticketNum, Scanner in){
 
      double totalCost = cost * TAX_RATE;
-
+     
      System.out.printf("\n\nThe total cost of the order is: $%,.2f", totalCost);
      System.out.println("\nYour order number is: " + ticketNum);
      System.out.print("\nAny number + ENTER to continue: ");
      int nullVar = in.nextInt();
      System.out.println("\n\n\n\n");
+}
+
+public static void getTotal(double totalGross, double totalNet, int ticket){
+
+     totalGross = totalNet * TAX_RATE;
+     System.out.printf("\n\n\nTotal Revenue including tax: \t$%,.2f", totalGross);
+     System.out.printf("\nTotal Revenue without tax: \t$%,.2f", totalNet);
+     System.out.println("\nTotal number of orders: \t" + (ticket - 1));
 }
 }

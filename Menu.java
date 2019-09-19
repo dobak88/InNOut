@@ -69,6 +69,7 @@ public static void getOrder(double cost, int ticketNum, Scanner in){
      System.out.printf("\n\nThe total cost of the order is: $%,.2f", totalCost);
      System.out.println("\nYour order number is: " + ticketNum);
      System.out.print("\nAny number + ENTER to continue: ");
+     //this section needs to be cleaned up- has to be a better way to pause system and wait for input of any kind
      int nullVar = in.nextInt();
      System.out.println("\n\n\n\n");
 }

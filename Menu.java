@@ -1,5 +1,5 @@
 /*        Dylan Rossi
-*         CS4A 9.18.19
+*         CS4A 9.19.19
 *         In-Class Assignment:
 *         POS System for IN N OUT
 */
@@ -14,12 +14,9 @@ public static void main(String[] args){
 
 public static void displayMenu(){
      Scanner in = new Scanner(System.in);
-     //Money
-     double subTotal = 0, totalGross = 0, totalNet = 0;
-     //Menu Items
-     double hamburger = 2.50, cheeseburger = 3.10, doubleDouble = 4.10, fries = 2.00, milkshake = 2.50, soda = 1.75;
-     //Order No., User Input
-     int ticket = 1, choice = 0;
+     double subTotal = 0, totalGross = 0, totalNet = 0;     //Money
+     double hamburger = 2.50, cheeseburger = 3.10, doubleDouble = 4.10, fries = 2.00, milkshake = 2.50, soda = 1.75;    //Menu Items
+     int ticket = 1, choice = 0;   //Order No., User Input
 
      while (choice != 8){
           System.out.println("\t\tMENU:\n"); //update menu with borders
@@ -62,11 +59,11 @@ public static double getSub(double menuChoice, Scanner in){
      return cost;
 }
 
-public static void getOrder(double cost, int ticketNum, Scanner in){
+public static void getOrder(double subTotal, int ticket, Scanner in){
 
-     double totalCost = cost * TAX_RATE;
+     double totalCost = subTotal * TAX_RATE;
      System.out.printf("\n\nThe total cost of the order is: $%,.2f", totalCost);
-     System.out.println("\nYour order number is: " + ticketNum);
+     System.out.println("\nYour order number is: " + ticket);
      System.out.print("\nAny number + ENTER to continue: ");
      //this line needs to be cleaned up- has to be a better way to pause system and wait for input of any kind
      int nullVar = in.nextInt();

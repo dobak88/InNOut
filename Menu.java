@@ -44,8 +44,11 @@ public static void displayMenu(){
                case 5: subTotal += getSub(milkshake, in); break;
                case 6: subTotal += getSub(soda, in); break;
                case 7: getOrder(subTotal, ticket, in); ticket++; totalNet += subTotal; subTotal = 0; break;
-               //if you have an open order, and did not choose '7' prior to '8'/QUIT, you lose the current order
-               case 8: getTotal(totalGross, totalNet, ticket); in.close(); break;
+               case 8: if (subTotal > 0){    //save current order before quitting
+                              getOrder(subTotal, ticket, in); ticket++; totalNet += subTotal; subTotal = 0;
+                       }
+                       else {}
+                       getTotal(totalGross, totalNet, ticket); in.close(); break;
           }
      }
 }
@@ -75,6 +78,6 @@ public static void getTotal(double totalGross, double totalNet, int ticket){
      totalGross = totalNet * TAX_RATE;
      System.out.printf("\n\n\nTotal Revenue including tax: \t$%,.2f", totalGross);
      System.out.printf("\nTotal Revenue without tax: \t$%,.2f", totalNet);
-     System.out.println("\nTotal number of orders:  \t" + (ticket - 1));
+     System.out.println("\nTotal number of orders: \t" + (ticket - 1));
 }
 }

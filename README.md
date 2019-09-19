@@ -3,9 +3,9 @@ POS system for in n out
 
 lines 53-57 can be its own function:
 
-getTotal(double totalGross, double totalNet, int ticket){
+public static void getTotal(double totalGross, double totalNet, int ticket){
   
-    totalGross = totalNet * TAX_RATE;
+     totalGross = totalNet * TAX_RATE;
 
      System.out.printf("\n\n\nTotal Revenue including tax: \t$%,.2f", totalGross);
      System.out.printf("\nTotal Revenue without tax: \t$%,.2f", totalNet);
@@ -16,6 +16,6 @@ getTotal(double totalGross, double totalNet, int ticket){
 switch statement:
 
 
-case 8: getTotal(totalGross, totalNet, ticket); break;
+``case 8: getTotal(totalGross, totalNet, ticket); break;
 
 

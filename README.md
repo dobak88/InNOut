@@ -24,6 +24,8 @@ switch statement:
 
 
 Line 69 needs some love and care...
+
+
 ^^^^^^^DONE^^^^^^^^
 
 An actual receipt with what they ordered would be nice...

@@ -1,5 +1,4 @@
-/*        Dylan Rossi
-*         CS4A 9.23.19
+/*        CS4A 9.23.19
 *         In-Class Assignment
 *         POS System for IN N OUT
 */

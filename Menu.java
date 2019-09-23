@@ -1,4 +1,5 @@
-/*        CS4A 9.23.19
+/*        Dylan Rossi
+*         CS4A 9.23.19
 *         In-Class Assignment
 *         POS System for IN N OUT
 */
@@ -15,10 +16,10 @@ public class Menu{
 
      public static void displayMenu(){
           Scanner in = new Scanner(System.in);
-          double subTotal = 0, totalGross = 0, totalNet = 0;                                                                 //Money
-          double hamburger = 2.50, cheeseburger = 3.10, doubleDouble = 4.10, fries = 2.00, milkshake = 2.50, soda = 1.75;    //Menu Items
-          int ticket = 1, choice = 0;                                                                                        //Order No., User Input
-          char saveOrder = 'N';                                                                                              //save order upon quit?
+          double subTotal = 0, totalGross = 0, totalNet = 0;                                                      //Money
+          double hamburger = 2.5, cheeseburger = 3.1, doubleDouble = 4.1, fries = 2, milkshake = 2.5, soda = 1.75;//Menu Items
+          int ticket = 1, choice = 0;                                                                             //Order No., User Input
+          char saveOrder = 'N';                                                                                   //save order upon quit?
 
           while (choice != 9){
                System.out.println("\t\tMENU:\n");
@@ -70,7 +71,7 @@ public class Menu{
 
      public static void getOrder(double subTotal, int ticket, Scanner in){
 
-          double totalCost = subTotal * TAX_RATE;
+          double totalCost = subTotal * TAX_RATE;                                                             //cost of order subtotal * tax
           System.out.println("\n\n******************************************");
           System.out.printf("* The total cost of the order is: $%,.2f", totalCost);
           System.out.println("\n* Your order number is: " + ticket);

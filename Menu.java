@@ -32,7 +32,7 @@ public class Menu{
                System.out.println("\t8: Cancel Order");
                System.out.println("\t9: Quit");
                System.out.println("\t\t\t\t\tTicket No.: " + ticket);
-               System.out.printf("\t\t\t\t\tSubtotal: $ %,.2f", subTotal);
+               System.out.printf("\t\t\t\t\tSubtotal: $%,.2f", subTotal);
                System.out.print("\n\n\t\tCHOICE:\t");
                choice = in.nextInt();
 

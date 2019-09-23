@@ -1,6 +1,9 @@
 # InNOut
 POS system for in n out
 
+(9/18)
+
+
 lines 53-57 can be its own function:
 
     public static void getTotal(double totalGross, double totalNet, int ticket){
@@ -22,10 +25,14 @@ switch statement:
 ^^^^^^^DONE^^^^^^^^
 
 
+(9/19)
+
 
 Line 69 needs some love and care...
 
 
 ^^^^^^^DONE^^^^^^^^
+
+(9/23)
 
 An actual receipt with what they ordered would be nice...
